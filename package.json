@@ -1,0 +1,35 @@
+{
+  "name": "ipp-theme-2",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "pr4": "json-server --host 127.0.0.1 --port 3004 --watch pr4/db.json",
+    "build": "node pr5/build.mjs",
+    "heroku-postbuild": "npm run build",
+    "start": "node pr5/server.mjs",
+    "pr6:mock": "prism mock -h 127.0.0.1 -p 4010 pr6/openapi.yaml",
+    "pr6:docs": "node pr6/docs.mjs",
+    "pr5:local": "node pr5/local.mjs"
+  },
+  "dependencies": {
+    "express": "5.1.0",
+    "mongodb": "6.20.0"
+  },
+  "devDependencies": {
+    "@angular/common": "20.3.0",
+    "@angular/compiler": "20.3.0",
+    "@angular/core": "20.3.0",
+    "@angular/platform-browser": "20.3.0",
+    "@stoplight/prism-cli": "5.14.2",
+    "esbuild": "0.25.10",
+    "json-server": "0.17.4",
+    "mongodb-memory-server": "10.2.3",
+    "redoc": "2.5.1",
+    "rxjs": "7.8.2",
+    "yaml": "2.8.1",
+    "zone.js": "0.15.1"
+  }
+}

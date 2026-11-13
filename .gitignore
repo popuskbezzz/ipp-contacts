@@ -1,0 +1,5 @@
+node_modules/
+pr5/public/app.js
+.env
+*.log
+pr5/.mongo-data/
